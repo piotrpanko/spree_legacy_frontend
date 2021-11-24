@@ -2,5 +2,7 @@
   <p class="checkout-content-header">
     <%= Spree.t(:summary).upcase %>
   </p>
+  <%= form.text_field :special_instructions, class: 'required spree-flat-input', required: true, placeholder: Spree.t(:special_instructions) %>
+  <%= form.label :special_instructions, class: 'text-uppercase' %>
   <%= render partial: 'spree/shared/order_details', locals: { order: @order } %>
 </div>
