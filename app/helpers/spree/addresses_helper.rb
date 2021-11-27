@@ -16,7 +16,7 @@ module Spree
                           aria: { label: method_name }) +
             form.label(method_name,
                        is_required ? "#{method_name} #{required}" : method_name,
-                       class: 'text-uppercase')
+                       class: 'text-uppercase label-blue')
         end
       end
     end
@@ -33,8 +33,8 @@ module Spree
                       aria: { label: Spree.t(:zipcode) }) +
         form.label(:zipcode,
                    is_required ? "#{method_name} #{required}" : method_name,
-                   class: 'text-uppercase',
-                   id: address_id + '_zipcode_label')
+                   class: 'text-uppercase label-blue',
+                   id: address_id + '_zipcode_label ')
     end
 
     def address_state(form, country, address_id = 'b')
@@ -54,7 +54,7 @@ module Spree
                           placeholder: Spree.t(:state) + " #{Spree.t(:required)}") +
           form.label(Spree.t(:state).downcase,
                      raw(Spree.t(:state) + content_tag(:abbr, " #{Spree.t(:required)}")),
-                     class: [have_states ? 'state-select-label' : nil, ' text-uppercase'].compact,
+                     class: [have_states ? 'state-select-label label-blue' : nil, 'text-uppercase'].compact,
                      id: address_id + '_state_label') +
           image_tag('arrow.svg',
                     class: [!have_states ? 'hidden' : nil, 'position-absolute spree-flat-select-arrow'].compact)

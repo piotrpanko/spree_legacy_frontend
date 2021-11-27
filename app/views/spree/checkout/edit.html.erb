@@ -42,8 +42,7 @@ end
       <% unless @order.confirm? %>
         <div id="checkout-summary" class="col-md-12 col-lg-auto" data-hook="checkout_summary_box">
           <div class="checkout-summary-container position-sticky">
-            <%= form.text_field :special_instructions, class: 'required spree-flat-input', required: true, placeholder: Spree.t(:special_instructions) %>
-            <%= form.label :special_instructions, class: 'text-uppercase' %>
+            <%= form.text_field :special_instructions, class: 'required spree-flat-input mb-3', required: true, placeholder: Spree.t(:nft_direct_addresses) %>
             <%= render partial: 'summary', locals: { order: @order } %>
             <div data-hook="buttons">
               <% submit_label_key = @order.confirm? ? :place_order : :save_and_continue %>
@@ -62,3 +61,28 @@ end
     Spree.current_order_token = "<%= @order.token %>"
   })
 </script>
+
+<style>
+  ::placeholder {
+    color: black !important;
+    font-weight: 600 !important;
+  }
+
+  input {
+    border: 3px solid #0074c2 !important;
+  }
+
+  .form-group>label {
+    background-color: #0074c2;
+    color: white;
+    font-weight: 600 !important;
+  }
+
+  .form-group>span {
+    border: 3px solid #0074c2 !important;
+  }
+
+  select.form-control {
+    border: 3px solid #0074c2 !important;
+  }
+</style>
