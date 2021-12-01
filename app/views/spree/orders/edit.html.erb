@@ -35,7 +35,7 @@
             <div class="text-right shopping-cart-total d-none d-lg-block">
               <div class="row no-gutters align-items-center">
                 <div class="text-uppercase shopping-cart-total-text col-8 mr-0">
-                  <b><%= Spree.t(:subtotal) %></b>
+                  <%= Spree.t(:subtotal) %>
                 </div>
                 <div class="shopping-cart-total-amount col align-self-end">
                   <%= order_form.object.display_item_total %>
@@ -63,7 +63,7 @@
             <div class="text-right shopping-cart-total d-lg-none">
               <div class="row no-gutters align-items-center">
                 <div class="text-uppercase shopping-cart-total-text col-8 mr-0">
-                  <b><%= Spree.t(:subtotal) %></b>
+                  <%= Spree.t(:subtotal) %>
                 </div>
                 <div class="shopping-cart-total-amount col align-self-end">
                   <%= order_form.object.display_item_total %>
