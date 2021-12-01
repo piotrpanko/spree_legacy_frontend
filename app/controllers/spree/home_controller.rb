@@ -7,7 +7,7 @@ module Spree
     respond_to :html
 
     def index
-      redirect_to
+      redirect_to spree.products_path(::Spree::Product.first)
     end
 
     private
