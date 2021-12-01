@@ -4,6 +4,7 @@ Spree::Core::Engine.add_routes do
 
     resources :products, only: [:index], path: '/'
     resources :products, only: [:show], path: '/products'
+    get '/', to: 'products#show'
 
     get '/products/:id/related', to: 'products#related'
     # route globbing for pretty nested taxon and product paths
