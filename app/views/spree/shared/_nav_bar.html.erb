@@ -1,15 +1,15 @@
 <ul id="nav-bar" class="nav align-items-center d-flex flex-nowrap justify-content-end navbar-right" data-turbo-permanent data-turbolinks-permanent>
-  <li class="pr-3">
-    <a href="https://metaframe.me#metaframe-preorder">Pre-order</a>
+  <li class="pr-3 nav-link">
+    <a class="menu-element" href="https://metaframe.me#metaframe-preorder">Pre-order</a>
   </li>
-  <li class="pr-3">
-    <a href="https://metaframe.me/faq">FAQ</a>
+  <li class="pr-3 nav-link">
+    <a class="menu-element" href="https://metaframe.me/faq">FAQ</a>
   </li>
-  <li class="pr-3">
-    <a href="https://metaframe.me/contact">Contact</a>
+  <li class="pr-3 nav-link">
+    <a class="menu-element" href="https://metaframe.me/contact">Contact</a>
   </li>
-  <li class="pr-3">
-    <a href="https://metframe.me/about">About us</a>
+  <li class="pr-3 nav-link">
+    <a class="menu-element" href="https://metframe.me/about">About us</a>
   </li>
   <% if defined?(spree.account_link_path) %>
     <li>
@@ -32,15 +32,15 @@
 </ul>
 
 <style>
-  #navbar>li>a:link {
+  .menu-element:link {
     text-decoration: none;
   }
 
-  #navbar>li>a:hover {
-    text-decoration: none;
+  .menu-element:hover {
+    text-decoration: underline;
   }
 
-  #navbar>li>a:active {
+  .menu-element:active {
     text-decoration: none;
   }
 </style>
