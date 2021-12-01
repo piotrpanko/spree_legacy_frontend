@@ -17,7 +17,7 @@ module Spree
                       'logo/spree_50.png'
                      end
 
-      path = spree.products_path(::Spree::Product.first)
+      path = spree.root_path + '/products/metaframe'
 
       link_to path, 'aria-label': current_store.name, method: options[:method] do
         image_tag image_path, alt: current_store.name, title: current_store.name
