@@ -1,4 +1,4 @@
-<div class="position-fixed text-uppercase d-xl-none mobile-navigation" role="navigation" aria-label="<%= Spree.t('nav_bar.mobile') %>">
+<div class="position-fixed text-uppercase d-xl-none mobile-navigation" role="navigation" data-no-turbolink="true" aria-label="<%= Spree.t('nav_bar.mobile') %>">
   <div class="container d-flex align-items-center justify-content-between header-spree" data-hook>
     <button class="m-0 p-0" id="mobile-navigation-back-button" aria-label="<%= Spree.t('nav_bar.go_to_previous_menu') %>">
       <%= icon(name: 'arrow-right',
@@ -18,7 +18,7 @@
 
   <ul class="list-unstyled position-relative h-100 mobile-navigation-list">
       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
-        <a class="mobile-menu-element" href="https://metaframe.me#metaframe-preorder">Pre-order</a>
+        <a class="mobile-menu-element" href="#metaframe-preorder">Pre-order</a>
       </li>
       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
         <a class="mobile-menu-element" href="https://metaframe.me/faq">FAQ</a>
