@@ -125,5 +125,5 @@ Spree.ready(function($) {
     }
   )
 
-  $('.carousel').carouselBootstrap4()
+  //$('.carousel').carouselBootstrap4()
 })
