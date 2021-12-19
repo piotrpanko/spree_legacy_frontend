@@ -24,12 +24,20 @@ Spree.showProductAddedModal = function(product, variant) {
     $modal.addClass(modalNoImageClass)
   }
 
-  $modal.modal()
+  try {
+    $modal.modal();
+  } catch(error) {
+    window.location.reload();
+  }
+
 }
 
 Spree.hideProductAddedModal = function() {
   var modalSelector = '.product-added-modal'
   var $modal = $(modalSelector)
-
-  $modal.modal('hide')
+  if ($modal != null) {
+    $modal.modal('hide')
+  } else {
+    window.location.reload()
+  }
 }
