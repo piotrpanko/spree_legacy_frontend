@@ -27,7 +27,7 @@ Spree.showProductAddedModal = function(product, variant) {
   try {
     $modal.modal();
   } catch(error) {
-    window.location.reload();
+    window.location.href = 'https://www.metaframe.me/cart';
   }
 
 }
