@@ -1,4 +1,3 @@
-<!-- TODO: Wyjebac logo z góry strony i dać na mobile menu -->
 <div class="position-fixed text-uppercase d-xl-none mobile-navigation" role="navigation" data-no-turbolink="true" aria-label="<%= Spree.t('nav_bar.mobile') %>">
   <div class="container d-flex align-items-center justify-content-between header-spree" data-hook>
     <button class="m-0 p-0" id="mobile-navigation-back-button" aria-label="<%= Spree.t('nav_bar.go_to_previous_menu') %>">
@@ -19,7 +18,13 @@
 
   <ul class="list-unstyled position-relative h-100 mobile-navigation-list">
       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item mt-5">
-        <a class="mobile-menu-element" onclick="scrollToPreorder()">Pre-order</a>
+        <% if current_page?(root_path) %>
+          <a class="mobile-menu-element" onclick="scrollToPreorder()">Pre-order</a>
+        <% else %>
+          <a href="https://www.metaframe.me/products/metaframe" aria-label="<%= current_store.name %>">
+            Pre-order
+          </a>
+        <% end %>
       </li>
       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
         <a class="mobile-menu-element" href="https://www.metaframe.me/faq">FAQ</a>
