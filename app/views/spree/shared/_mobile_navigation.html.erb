@@ -18,10 +18,10 @@
 
   <ul class="list-unstyled position-relative h-100 mobile-navigation-list">
       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item mt-5">
-        <% if current_page?(root_path) %>
+        <% if current_page?('/products/metaframe') %>
           <a class="mobile-menu-element" onclick="scrollToPreorder()">Pre-order</a>
         <% else %>
-          <a href="https://www.metaframe.me/products/metaframe" aria-label="<%= current_store.name %>">
+          <a class="mobile-menu-element" href="https://www.metaframe.me/products/metaframe" aria-label="<%= current_store.name %>">
             Pre-order
           </a>
         <% end %>
@@ -39,7 +39,7 @@
         <a class="mobile-menu-element" href="https://www.metaframe.me/cart">Cart</a>
       </li>
   </ul>
-
+</div>
   <style>
     .mobile-menu-element {
       color: white;

@@ -1,9 +1,9 @@
-<ul id="nav-bar" class="nav align-items-center d-flex flex-nowrap justify-content-end navbar-right" data-no-turbolink="true">
+<ul id="nav-bar" class="nav align-items-center d-flex flex-nowrap justify-content-end navbar-right">
   <li class="pr-3 nav-link">
-    <% if current_page?(root_path) %>
+    <% if current_page?('/products/metaframe') %>
       <a class="mobile-menu-element" onclick="scrollToPreorder()">Pre-order</a>
     <% else %>
-      <a href="https://www.metaframe.me/products/metaframe" aria-label="<%= current_store.name %>">
+      <a class="menu-element" href="https://www.metaframe.me/products/metaframe" aria-label="<%= current_store.name %>">
         Pre-order
       </a>
     <% end %>
@@ -46,6 +46,10 @@
   .menu-element {
     color: white;
     text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:hover {
     cursor: pointer;
   }
 
