@@ -42,7 +42,8 @@ end
       <% unless @order.confirm? %>
         <div id="checkout-summary" class="col-md-12 col-lg-auto" data-hook="checkout_summary_box">
           <div class="checkout-summary-container position-sticky">
-            <%= form.text_field :special_instructions, class: 'required spree-flat-input mb-3', required: true, placeholder: Spree.t(:link_to_nft_on_opensea), oninvalid: "this.setCustomValidity('Put a link (or multiple links) to your NFT on OpenSea, example: https://opensea.io/assets/0xecdd2f733bd20e56865750ebce33f17da0bee461/4726')", oninput:"this.setCustomValidity('')" %>
+            <%= form.label 'Type here link to NFT you want to display', style: 'margin-bottom: 0px; font-weight: 600;' %>
+            <%= form.text_field :special_instructions, style: 'border: 2px solid #009fe3;', class: 'required spree-flat-input mb-3', required: true, placeholder: Spree.t(:link_to_nft_on_opensea), oninvalid: "this.setCustomValidity('Put a link (or multiple links) to your NFT on any marketplace (like OpenSea), example: https://opensea.io/assets/0xecdd2f733bd20e56865750ebce33f17da0bee461/4726')", oninput:"this.setCustomValidity('')" %>
             <%= render partial: 'summary', locals: { order: @order } %>
             <div data-hook="buttons">
               <% submit_label_key = @order.confirm? ? :place_order : :save_and_continue %>
