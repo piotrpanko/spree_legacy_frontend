@@ -4,6 +4,9 @@
       <div>
         Designed and developed by <%= link_to 'METAFRAME', 'https://metaframe.me/', target: :_blank, 'aria-label': 'Go to METAFRAME', rel: :follow %> | © <%= Time.current.year %> <%= link_to current_store.name, current_store.formatted_url %>. <%= Spree.t(:all_rights_reserved) %>.
       </div>
+      <div style="max-height: 50px;">
+        <img src="<%= image_path('powered-by-stripe-blue.svg') %>" alt="">
+      </div>
     </div>
   </div>
 </div>
