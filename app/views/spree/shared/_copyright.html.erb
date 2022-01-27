@@ -4,7 +4,15 @@
       <div>
         Designed and developed by <%= link_to 'METAFRAME', 'https://metaframe.me/', target: :_blank, 'aria-label': 'Go to METAFRAME', rel: :follow %> | © <%= Time.current.year %> <%= link_to current_store.name, current_store.formatted_url %>. <%= Spree.t(:all_rights_reserved) %>.
       </div>
-      <img style="max-height: 25px;" src="<%= image_path('powered-by-stripe-blue.svg') %>" alt="">
+      <div class="ml-auto">
+        <img class="float-right d-block" style="max-height:35px;" src="<%= image_path('credit_cards/icons/american_express.svg') %>" alt="">
+        <img class="float-right d-block" style="max-height:35px;" src="<%= image_path('credit_cards/icons/visa.svg') %>" alt="">
+        <img class="float-right d-block" style="max-height:35px;" src="<%= image_path('credit_cards/icons/discover.svg') %>" alt="">
+        <img class="float-right d-block" style="max-height:35px;" src="<%= image_path('credit_cards/icons/master.svg') %>" alt="">
+        <a href="https://stripe.com/">
+          <img class="float-right d-block" style="max-height: 35px;" src="<%= image_path('powered-by-stripe.svg') %>" alt="">
+        </a>
+      </div>
     </div>
   </div>
 </div>
