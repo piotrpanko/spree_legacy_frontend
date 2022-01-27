@@ -28,11 +28,11 @@
                        width: 68,
                        height: 68) %>
             </div>
-            <div class="col-8 col-sm-6 col-lg-4 product-added-modal-message">
+            <div class="col-8 col-sm-6 col-lg-6 product-added-modal-message" style="font-family: 'Akira'">
               <%= Spree.t(:added_to_cart) %>
             </div>
           </div>
-          <div class="row pt-5 justify-content-center align-items-center product-added-modal-product">
+          <div style="font-weight: bold; letter-spacing:0.2em;" class="row pt-5 justify-content-center align-items-center product-added-modal-product">
             <div class="col-4 col-sm-2 product-added-modal-product-image-container">
               <img class="product-added-modal-product-image-container-image" src="data:," alt="<%= @product&.name %>">
             </div>
